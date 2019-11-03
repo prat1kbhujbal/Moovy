@@ -1,0 +1,5 @@
+<launch>
+  <include file="/home/pratik/review4/src/demo_car/launch/gazebo1.launch"/>
+
+    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find demo_car)/launch/laser.rviz"/>
+</launch>

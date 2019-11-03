@@ -1,0 +1,277 @@
+<?xml version="1.0" ?>
+<robot name="model">
+  <joint name="quad__link_0_JOINT_0" type="revolute">
+    <parent link="quad__link_0"/>
+    <child link="quad__link_1"/>
+    <origin rpy="0  0  0" xyz="0.112 -0.112  1.055"/>
+    <axis xyz="0  0  1"/>
+    <limit effort="-1.0" lower="-1.79769e+308" upper="1.79769e+308" velocity="-1.0"/>
+  </joint>
+  <joint name="quad__link_0_JOINT_1" type="revolute">
+    <parent link="quad__link_0"/>
+    <child link="quad__link_1_clone"/>
+    <origin rpy="0  0  0" xyz="0.11208  0.11191  1.055"/>
+    <axis xyz="0  0  1"/>
+    <limit effort="-1.0" lower="-1.79769e+308" upper="1.79769e+308" velocity="-1.0"/>
+  </joint>
+  <joint name="quad__link_0_JOINT_2" type="revolute">
+    <parent link="quad__link_0"/>
+    <child link="quad__link_1_clone_0"/>
+    <origin rpy="0  0  0" xyz="-0.11191 -0.11208  1.055"/>
+    <axis xyz="0  0  1"/>
+    <limit effort="-1.0" lower="-1.79769e+308" upper="1.79769e+308" velocity="-1.0"/>
+  </joint>
+  <joint name="quad__link_0_JOINT_3" type="revolute">
+    <parent link="quad__link_0"/>
+    <child link="quad__link_1_clone_1"/>
+    <origin rpy="0       0      -0.00318" xyz="-0.11182  0.11217  1.055"/>
+    <axis xyz="0  0  1"/>
+    <limit effort="-1.0" lower="-1.79769e+308" upper="1.79769e+308" velocity="-1.0"/>
+  </joint>
+  <link name="quad__link_0">
+<static>true</static>
+    <inertial>
+      <mass value="1"/>
+      <origin rpy="0  0  0" xyz="0  0  1"/>
+      <inertia ixx="0.166667" ixy="0" ixz="0" iyy="0.166667" iyz="0" izz="0.166667"/>
+    </inertial>
+    <collision name="quad__collision">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="/home/pratik/mdd_urdf/quad/meshes/base_link.STL" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual name="quad__visual">
+      <origin rpy="0  0  0" xyz="0  0  1"/>
+      <geometry>
+        <mesh filename="/home/pratik/mdd_urdf/quad/meshes/base_link.STL" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="quad__link_1">
+
+    <inertial>
+      <mass value="1"/>
+      <origin rpy="0  0  0" xyz="0  0  1"/>
+      <inertia ixx="0.166667" ixy="0" ixz="0" iyy="0.166667" iyz="0" izz="0.166667"/>
+    </inertial>
+    <collision name="quad__collision">
+      <origin rpy="0  0  0" xyz="-0.112  0.112 -0.055"/>
+      <geometry>
+        <mesh filename="/home/pratik/mdd_urdf/fr_prop/meshes/fr_prop.STL" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual name="quad__visual">
+      <origin rpy="0  0  0" xyz="-0.112  0.112 -0.055"/>
+      <geometry>
+        <mesh filename="/home/pratik/mdd_urdf/fr_prop/meshes/fr_prop.STL" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="quad__link_1_clone">
+    <inertial>
+      <mass value="1"/>
+      <origin rpy="0  0  0" xyz="0  0  1"/>
+      <inertia ixx="0.166667" ixy="0" ixz="0" iyy="0.166667" iyz="0" izz="0.166667"/>
+    </inertial>
+    <collision name="quad__collision">
+      <origin rpy="0    0    1.57" xyz="-0.11208 -0.11191 -0.055"/>
+      <geometry>
+        <mesh filename="/home/pratik/mdd_urdf/fr_prop/meshes/fr_prop.STL" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual name="quad__visual">
+      <origin rpy="0    0    1.57" xyz="-0.11208 -0.11191 -0.055"/>
+      <geometry>
+        <mesh filename="/home/pratik/mdd_urdf/fr_prop/meshes/fr_prop.STL" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="quad__link_1_clone_0">
+    <inertial>
+      <mass value="1"/>
+      <origin rpy="0  0  0" xyz="0  0  1"/>
+      <inertia ixx="0.166667" ixy="0" ixz="0" iyy="0.166667" iyz="0" izz="0.166667"/>
+    </inertial>
+    <collision name="quad__collision">
+      <origin rpy="0    0   -1.57" xyz="0.11191  0.11208 -0.055"/>
+      <geometry>
+        <mesh filename="/home/pratik/mdd_urdf/fr_prop/meshes/fr_prop.STL" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual name="quad__visual">
+      <origin rpy="0    0   -1.57" xyz="0.11191  0.11208 -0.055"/>
+      <geometry>
+        <mesh filename="/home/pratik/mdd_urdf/fr_prop/meshes/fr_prop.STL" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="quad__link_1_clone_1">
+    <inertial>
+      <mass value="1"/>
+      <origin rpy="0  0  0" xyz="0  0  1"/>
+      <inertia ixx="0.166667" ixy="0" ixz="0" iyy="0.166667" iyz="0" izz="0.166667"/>
+    </inertial>
+    <collision name="quad__collision">
+      <origin rpy="0    0   -3.14" xyz="0.11217 -0.11182 -0.055"/>
+      <geometry>
+        <mesh filename="/home/pratik/mdd_urdf/fr_prop/meshes/fr_prop.STL" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual name="quad__visual">
+      <origin rpy="0    0   -3.14" xyz="0.11217 -0.11182 -0.055"/>
+      <geometry>
+        <mesh filename="/home/pratik/mdd_urdf/fr_prop/meshes/fr_prop.STL" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+<gazebo>
+           <plugin name="rotor_0_blade_1" filename="libLiftDragPlugin.so">
+      <a0>0.3</a0>
+      <alpha_stall>1.4</alpha_stall>
+      <cla>4.2500</cla>
+      <cda>0.10</cda>
+      <cma>0.00</cma>
+      <cla_stall>-0.025</cla_stall>
+      <cda_stall>0.0</cda_stall>
+      <cma_stall>0.0</cma_stall>
+      <area>0.002</area>
+      <air_density>1.2041</air_density>
+      <cp>0.084 0 0</cp>
+      <forward>0 1 0</forward>
+      <upward>0 0 1</upward>
+      <link_name>quad__link_1</link_name>
+    </plugin>
+    <plugin name="rotor_0_blade_2" filename="libLiftDragPlugin.so">
+      <a0>0.3</a0>
+      <alpha_stall>1.4</alpha_stall>
+      <cla>4.2500</cla>
+      <cda>0.10</cda>
+      <cma>0.00</cma>
+      <cla_stall>-0.025</cla_stall>
+      <cda_stall>0.0</cda_stall>
+      <cma_stall>0.0</cma_stall>
+      <area>0.002</area>
+      <air_density>1.2041</air_density>
+      <cp>-0.084 0 0</cp>
+      <forward>0 -1 0</forward>
+      <upward>0 0 1</upward>
+      <link_name>quad__link_1</link_name>
+    </plugin>
+
+    <plugin name="rotor_1_blade_1" filename="libLiftDragPlugin.so">
+      <a0>0.3</a0>
+      <alpha_stall>1.4</alpha_stall>
+      <cla>4.2500</cla>
+      <cda>0.10</cda>
+      <cma>0.00</cma>
+      <cla_stall>-0.025</cla_stall>
+      <cda_stall>0.0</cda_stall>
+      <cma_stall>0.0</cma_stall>
+      <area>0.002</area>
+      <air_density>1.2041</air_density>
+      <cp>0.084 0 0</cp>
+      <forward>0 1 0</forward>
+      <upward>0 0 1</upward>
+      <link_name>quad__link_1_clone</link_name>
+    </plugin>
+    <plugin name="rotor_1_blade_2" filename="libLiftDragPlugin.so">
+      <a0>0.3</a0>
+      <alpha_stall>1.4</alpha_stall>
+      <cla>4.2500</cla>
+      <cda>0.10</cda>
+      <cma>0.00</cma>
+      <cla_stall>-0.025</cla_stall>
+      <cda_stall>0.0</cda_stall>
+      <cma_stall>0.0</cma_stall>
+      <area>0.002</area>
+      <air_density>1.2041</air_density>
+      <cp>-0.084 0 0</cp>
+      <forward>0 -1 0</forward>
+      <upward>0 0 1</upward>
+      <link_name>quad__link_1_clone</link_name>
+    </plugin>
+
+    <plugin name="rotor_2_blade_1" filename="libLiftDragPlugin.so">
+      <a0>0.3</a0>
+      <alpha_stall>1.4</alpha_stall>
+      <cla>4.2500</cla>
+      <cda>0.10</cda>
+      <cma>0.00</cma>
+      <cla_stall>-0.025</cla_stall>
+      <cda_stall>0.0</cda_stall>
+      <cma_stall>0.0</cma_stall>
+      <area>0.002</area>
+      <air_density>1.2041</air_density>
+      <cp>0.084 0 0</cp>
+      <forward>0 -1 0</forward>
+      <upward>0 0 1</upward>
+      <link_name>quad__link_1_clone_0</link_name>
+    </plugin>
+    <plugin name="rotor_2_blade_2" filename="libLiftDragPlugin.so">
+      <a0>0.3</a0>
+      <alpha_stall>1.4</alpha_stall>
+      <cla>4.2500</cla>
+      <cda>0.10</cda>
+      <cma>0.00</cma>
+      <cla_stall>-0.025</cla_stall>
+      <cda_stall>0.0</cda_stall>
+      <cma_stall>0.0</cma_stall>
+      <area>0.002</area>
+      <air_density>1.2041</air_density>
+      <cp>-0.084 0 0</cp>
+      <forward>0 1 0</forward>
+      <upward>0 0 1</upward>
+      <link_name>quad__link_1_clone_0</link_name>
+    </plugin>
+
+    <plugin name="rotor_3_blade_1" filename="libLiftDragPlugin.so">
+      <a0>0.3</a0>
+      <alpha_stall>1.4</alpha_stall>
+      <cla>4.2500</cla>
+      <cda>0.10</cda>
+      <cma>0.00</cma>
+      <cla_stall>-0.025</cla_stall>
+      <cda_stall>0.0</cda_stall>
+      <cma_stall>0.0</cma_stall>
+      <area>0.002</area>
+      <air_density>1.2041</air_density>
+      <cp>0.084 0 0</cp>
+      <forward>0 -1 0</forward>
+      <upward>0 0 1</upward>
+      <link_name>quad__link_1_clone_1</link_name>
+    </plugin>
+    <plugin name="rotor_3_blade_2" filename="libLiftDragPlugin.so">
+      <a0>0.3</a0>
+      <alpha_stall>1.4</alpha_stall>
+      <cla>4.2500</cla>
+      <cda>0.10</cda>
+      <cma>0.00</cma>
+      <cla_stall>-0.025</cla_stall>
+      <cda_stall>0.0</cda_stall>
+      <cma_stall>0.0</cma_stall>
+      <area>0.002</area>
+      <air_density>1.2041</air_density>
+      <cp>-0.084 0 0</cp>
+      <forward>0 1 0</forward>
+      <upward>0 0 1</upward>
+      <link_name>quad__link_1_clone_1</link_name>
+    </plugin>
+  </gazebo>
+ <gazebo>
+    <plugin filename="libgazebo_ros_skid_steer_drive.so" name="skid_steer_drive_controller">
+      <updateRate>100.0</updateRate>
+      <robotNamespace>/</robotNamespace>
+      <leftFrontJoint>quad__link_0_JOINT_0</leftFrontJoint>
+      <rightFrontJoint>quad__link_0_JOINT_1</rightFrontJoint>
+      <leftRearJoint>quad__link_0_JOINT_3</leftRearJoint>
+      <rightRearJoint>quad__link_0_JOINT_2</rightRearJoint>
+      <wheelSeparation>0.212</wheelSeparation>
+      <wheelDiameter>0.01</wheelDiameter>
+      <robotBaseFrame>quad__link_0</robotBaseFrame>
+      <torque>10</torque>
+      <topicName>cmd_vel</topicName>
+      <broadcastTF>false</broadcastTF>
+    </plugin>
+  </gazebo>
+</robot>
